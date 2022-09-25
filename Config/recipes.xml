@@ -1,0 +1,57 @@
+﻿<configs>
+
+	<insertAfter xpath="/recipes/recipe[@name='resourceBone']">
+		<recipe name="foodRottingFlesh" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true"
+				tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+	</insertAfter>
+	
+	<append xpath="/recipes">
+
+		<recipe name="meleeToolFarmT1IronFertilityHoe" count="1"
+				tags="learnable,perkLivingOffTheLandFertility">
+			<ingredient name="resourceForgedIron" count="16"/>
+			<ingredient name="resourceWood" count="10"/>
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5"
+								tags="resourceForgedIron,resourceWood,resourceLeather,resourceDuctTape"/>
+			</effect_group>
+		</recipe>
+
+		<!-- Can be crafted once you have a beaker -->
+		<!-- Using direct fertilization is expensive -->
+		<recipe name="resourceFertilizer" count="15"
+				craft_time="120" tags="learnable,perkLivingOffTheLandCrafting"
+				craft_tool="toolCookingGrill" craft_area="campfire">
+			<ingredient name="foodRottingFlesh" count="25"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="150"/>
+			<ingredient name="resourceClayLump" count="100"/>
+			<ingredient name="bucketRiverWater" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add"
+					value="-.1,-.2,-.3" tags="foodRottingFlesh,resourcePotassiumNitratePowder,resourceClayLump"/>
+			</effect_group>
+		</recipe>
+
+		<!-- Makes using the fertilizer the preferred way ... -->
+		<recipe name="resourceFertilizer" count="25" craft_time="80"
+				tags="learnable,chemStationCrafting,perkLivingOffTheLandCrafting"
+				craft_area="chemistryStation">
+			<ingredient name="foodRottingFlesh" count="25"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="150"/>
+			<ingredient name="resourceClayLump" count="50"/>
+			<ingredient name="drinkJarBoiledWater" count="8"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add"
+					value="-.2,-.4,-.6" tags="foodRottingFlesh,resourcePotassiumNitratePowder,resourceClayLump,drinkJarBoiledWater"/>
+			</effect_group>
+		</recipe>
+
+	</append>
+
+	<append xpath="/recipes/recipe[@name='farmPlotBlockVariantHelper']">
+		<ingredient name="resourceFertilizer" count="2"/>
+	</append>
+
+</configs>

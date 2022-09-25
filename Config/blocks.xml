@@ -1,0 +1,66 @@
+﻿<configs>
+
+	<append xpath="/blocks">
+
+		<block name="terrFarmland">
+			<property name="CreativeMode" value="None	"/>
+			<property name="Class" value="CustomTerrain, CustomTextures"/>
+			<property name="Material" value="Mdirt"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="LPHardnessScale" value="2"/>
+			<!-- farmPlotBlockPlayer -->
+			<property class="RepairItems">
+				<property name="resourceClayLump" value="14"/>
+			</property>
+			<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDirt" count="1" prob="0.25" stick_chance="1"/>
+			<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="FilterTags" value="fterrain"/>
+			<property name="SortOrder1" value="d0k0"/>
+			<property name="SortOrder2" value="0050"/>
+			<property name="DisplayType" value="blockTerrain"/>
+
+			<property name="Texture" value="2"/>
+			<property name="Map.Color" value="20,50,21"/>
+			<!-- Main setting needed to enable custom terrain blends -->
+			<!-- It seems this is the main knob the tell micro splat -->
+			<!-- to also sample additional texture for the final result -->
+			<property name="TerrainBlend" value="1.0"/>
+			<!-- Below are the blend settings -->
+			<!-- Most times you want 2 or 3 blends max -->
+			<!-- Some combinations work OK, some work badly -->
+			<!-- You'll need to figure out a combo that fits -->
+			<property name="BlendDirt" value="0.65"/>
+			<property name="BlendGravel" value="0.65"/>
+			<property name="BlendOreCoal" value="0.3"/>
+			<property name="BlendAsphalt" value="0.0"/>
+			<property name="BlendOreIron" value="0.0"/>
+			<property name="BlendOreNitrate" value="0.0"/>
+			<property name="BlendOreOil" value="0.0"/>
+			<property name="BlendOreLead" value="0.0"/>
+			<property name="BlendStoneDesert" value="0.85"/>
+			<property name="BlendStoneRegular" value="0.0"/>
+			<property name="BlendStoneDestroyed" value="0.0"/>
+		
+		</block>
+
+		<block name="terrFarmlandFertile">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Extends" value="terrFarmland"/>
+			<property name="Material" value="Mfarmland"/>
+			<property name="EconomicValue" value="15"/>
+			<property name="DisplayType" value="blockTerrainFertile"/>
+			<drop event="Harvest" name="resourceFertilizer" count="1,2" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="oreWoodHarvest"/>
+		</block>
+
+	</append>
+	
+</configs>

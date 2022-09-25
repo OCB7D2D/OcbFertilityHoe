@@ -1,0 +1,11 @@
+Key,English
+ttFertilityHoePlantTooClose,Another plant is too close by and would be destroyed! 
+ttFertilityHoeMissingResources,You don't have the required resources to fertilize.
+ttFertilityHoeAllGood,Fertilize terrain block
+ttFertilityHoeFertileNearby,Fertile terrain nearby
+ttFertilityHoePlantsNearby,Nearby plant detected
+ttFertilityHoeAlreadyFertile,Terrain is fertile
+meleeToolFarmT1IronFertilityHoe,Fertilizer Hoe
+meleeToolFarmT1IronFertilityHoeDesc,"Used to fertilize suited terrain. Primary action requires 2 fertilizer, 8 rotten flesh, 30 nitrate and 20 clay and requires minimal distance. Secondary action requires 8 fertilizer and 10 clay without distance limit. Non green outlines don't apply to secondary action."
+resourceFertilizer,Organic Fertilizer
+resourceFertilizerDesc,Fertilizer is required to fertilize land with a hoe and to build farm plots. Crafted in a Campfire or a Chemistry Station in bundles of 15 or 25.

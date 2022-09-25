@@ -1,0 +1,7 @@
+﻿<configs>
+
+	<append xpath="/materials/material[@id='MfoodRawMeat']">
+		<property name="forge_category" value="foodRawMeat"/>
+	</append>
+
+</configs>

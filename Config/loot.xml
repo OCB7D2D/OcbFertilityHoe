@@ -1,0 +1,31 @@
+﻿<configs>
+
+	<!-- add use as loot wherever the iron shovel is also in the loot list -->
+	<append xpath="/lootcontainers/lootgroup[item[@name='meleeToolShovelT1IronShovel']]">
+		<item name="meleeToolFarmT1IronFertilityHoe"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='seeds'
+			or @name='groupScrapUncommon' or name='rottenFood'
+			or @name='groupUtilityCart' or @name='groupWorkbenchLoot01'
+			or @name='groupChemistryStationLoot01' or @name='groupCoffins01']">
+		<item name="resourceFertilizer" count="1,2" />
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupFoodTrash'
+			or @name='groupShamwayProduce01' or @name='groupChem01'
+			 or @name='groupCaskets01' or @name='groupBirdNest02']">
+		<item name="resourceFertilizer" count="1,2" loot_prob_template="veryLow" />
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupWorkingStiffs01'
+			or @name='groupGarage02' or @name='groupIngredientsRare']">
+		<item name="resourceFertilizer" count="1,2" loot_prob_template="low" />
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupBathtub']">
+		<item name="resourceFertilizer" count="1,5"
+			  loot_prob_template="low" force_prob="true" />
+	</append>
+
+</configs>
